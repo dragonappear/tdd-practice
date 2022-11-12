@@ -9,11 +9,12 @@ public class test {
     @DisplayName("곱셈")
     @Test
     void 곱셈(){
-        //given
         Dollar five = new Dollar(5);
-        //when
-        five.times(2);
-        //then
-        Assertions.assertThat(10).isEqualTo(five.amount);
+        Dollar product = five.times(2);
+        Assertions.assertThat(10).isEqualTo(product.amount);
+
+        product = five.times(3);
+        Assertions.assertThat(15).isEqualTo(product.amount);
+
     }
 }
