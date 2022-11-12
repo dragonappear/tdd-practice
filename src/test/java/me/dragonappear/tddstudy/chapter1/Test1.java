@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class test {
+public class Test1 {
 
     @Test
     void testDollarMultiplication(){
@@ -17,12 +17,8 @@ public class test {
     void testEquality() {
         assertThat(new Dollar(5)).isEqualTo(new Dollar(5));
         assertThat(new Dollar(5)).isNotEqualTo(new Dollar(6));
+        assertThat(new Franc(5)).isEqualTo(new Franc(5));
+        assertThat(new Franc(5)).isNotEqualTo(new Franc(6));
     }
 
-    @Test
-    void testFrancMultiplication(){
-        Franc five = Franc Dollar(5);
-        assertThat(new Franc(10)).isEqualTo(Franc.times(2));
-        assertThat(new Franc(15)).isEqualTo(Franc.times(3));
-    }
 }
