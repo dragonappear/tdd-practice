@@ -1,20 +1,20 @@
 package me.dragonappear.tddstudy.chapter1;
 
-public class Dollar {
+public class Franc {
 
     private int amount;
 
-    public Dollar(int amount) {
+    public Franc(int amount) {
         this.amount = amount;
     }
 
-    public Dollar times(int multiplier) {
-        return new Dollar(this.amount * multiplier);
+    public Franc times(int multiplier) {
+        return new Franc(this.amount * multiplier);
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Dollar && ((Dollar) obj).amount == this.amount) {
+        if (obj instanceof Dollar && ((Franc) obj).amount == this.amount) {
             return true;
         }
 
