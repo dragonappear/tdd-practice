@@ -22,4 +22,10 @@ public class Test1 {
         assertThat(Money.franc(5)).isNotEqualTo(Money.dollar(5));
     }
 
+    @Test
+    void testCurrency() {
+        assertThat("USD").isEqualTo(Money.dollar(1).getCurrency());
+        assertThat("CHF").isEqualTo(Money.franc(1).getCurrency());
+    }
+
 }
