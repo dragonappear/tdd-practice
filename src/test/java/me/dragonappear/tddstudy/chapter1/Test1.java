@@ -19,4 +19,16 @@ public class Test1 {
         assertThat("CHF").isEqualTo(Money.franc(1).currency());
     }
 
+
+    @Test
+    void testSimpleAddition(){
+        Money five = Money.dollar(5);
+        Expression expression = five.plus(five);
+
+        Bank bank = new Bank();
+
+        Money reduced = bank.reduce(five, "USD");
+        assertThat(Money.dollar(10)).isEqualTo(reduced);
+    }
+
 }
